@@ -1,0 +1,27 @@
+{
+  "name": "upbit-mcp-trading-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "node test-api.js"
+  },
+  "keywords": ["upbit", "api", "cryptocurrency", "trading", "exchange", "bot"],
+  "author": "",
+  "license": "MIT",
+  "description": "Upbit API를 활용한 MCP(Multi Communication Protocol) 서버 및 트레이딩 봇",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "request-promise-native": "^1.0.9",
+    "uuid": "^8.3.2",
+    "websocket": "^1.0.34"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
