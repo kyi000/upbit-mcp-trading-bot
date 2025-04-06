@@ -89,7 +89,11 @@ class Backtester {
         context.currentCandle = candle;
         
         // 전략에 데이터 전달
-        const signal = await strategy.onData(candle);
+        const signal = await strategy.onData({
+          type: 'candle',
+          market,
+          data: candle
+        });
         
         if (signal) {
           // 매매 신호에 따라 주문 실행
@@ -148,7 +152,7 @@ class Backtester {
       const quantity = (availableCash - fee) / executionPrice;
       
       // 포트폴리오 업데이트
-      portfolio.cash -= (availableCash - fee);
+      portfolio.cash -= (availableCash);
       
       if (!portfolio.assets[symbol]) {
         portfolio.assets[symbol] = { quantity: 0, avgPrice: 0 };
