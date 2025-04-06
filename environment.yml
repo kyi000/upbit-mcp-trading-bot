@@ -1,0 +1,11 @@
+name: upbit-mcp
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - nodejs=16.15
+  - npm=8.5
+  - pip=22.1
+  - python=3.9
+  - pip:
+    - python-dotenv==0.20.0
